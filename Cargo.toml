@@ -3,7 +3,7 @@ name = "kinglet"
 version = "0.1.0"
 edition = "2021"
 authors = [ "Nelu Snegur <nelu@pulsarplanet.com>" ]
-keywords = [ "kernel", "os", "arm" ]
+keywords = [ "kernel", "os", "aarch64", "arm" ]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/nelusnegur/kinglet"
@@ -13,4 +13,9 @@ include = [
   "LICENSE",
 ]
 
-[dependencies]
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
