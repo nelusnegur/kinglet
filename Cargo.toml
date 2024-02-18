@@ -1,9 +1,8 @@
 [package]
 name = "kinglet"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 authors = [ "Nelu Snegur <nelu@pulsarplanet.com>" ]
-keywords = [ "kernel", "os", "aarch64", "arm" ]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/nelusnegur/kinglet"
