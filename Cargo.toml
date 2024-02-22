@@ -1,16 +1,17 @@
-[package]
-name = "kinglet"
+[workspace]
+members = [
+  "arch/aarch64",
+  "kernel"
+]
+resolver="2"
+
+[workspace.package]
 version = "0.0.1"
 edition = "2021"
 authors = [ "Nelu Snegur <nelu@pulsarplanet.com>" ]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/nelusnegur/kinglet"
-include = [
-  "src/**/*",
-  "Cargo.toml",
-  "LICENSE",
-]
 
 [profile.dev]
 panic = "abort"

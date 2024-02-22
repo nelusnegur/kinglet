@@ -1,0 +1,9 @@
+[package]
+name = "kinglet_aarch64"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kinglet_kernel = { path = "../../kernel" }
