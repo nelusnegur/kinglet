@@ -1,0 +1,5 @@
+[alias]
+build-aarch64 = "build --release --target=aarch64-unknown-none"
+build-debug-aarch64 = "build --target=aarch64-unknown-none"
+clean-aarch64 = "clean --target=aarch64-unknown-none"
+clippy-aarch64 = "clippy --target=aarch64-unknown-none"

@@ -1,6 +1,7 @@
 [build]
 target = "aarch64-unknown-none"
 
-# TODO: Set up the linker file
-# [target.aarch64-unknown-none]
-# linker = ""
+[target.aarch64-unknown-none]
+rustflags = [
+  "-C", "link-arg=-T./arch/aarch64/src/kinglet.ld",
+]
