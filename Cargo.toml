@@ -1,6 +1,7 @@
 [workspace]
 members = [
   "arch/aarch64",
+  "drivers",
   "kernel"
 ]
 resolver="2"
