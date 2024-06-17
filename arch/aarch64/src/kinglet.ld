@@ -2,6 +2,7 @@ OUTPUT_ARCH(aarch64)
 ENTRY(_entry)
 
 KIMAGE_ADDRESS = 0x80000;
+SIZE_4K = 0X1000;
 
 SECTIONS
 {
@@ -36,4 +37,7 @@ SECTIONS
 
     . = ALIGN(8);
     __bss_end = .;
+
+    . += SIZE_4K;
+    __stack = .;
 }

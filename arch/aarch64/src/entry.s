@@ -16,7 +16,7 @@ primary_cpu_entry:
   bl .memzero
 
   // Set up stack pointer
-  ldr x5, =start
+  ldr x5, =__stack
   mov sp, x5
 
   bl start
