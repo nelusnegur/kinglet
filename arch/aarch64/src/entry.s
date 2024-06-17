@@ -41,9 +41,7 @@ secondary_cpu_entry:
 //
 // The provided region of memory must be 8-byte aligned.
 .memzero:
-  lsr x1, x1, #3
-1:
-  str xzr, [x0], #8
-  sub x2, x1, #1
-  cbnz x2, 1b
-  ret
+	str xzr, [x0], #8
+	subs x1, x1, #8
+	b.gt .memzero
+	ret
