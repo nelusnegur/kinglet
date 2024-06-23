@@ -13,6 +13,7 @@ primary_cpu_entry:
   ldr x0, =__bss_start
   ldr x1, =__bss_end
   sub x1, x1, x0
+  lsr x1, x1, #3
   bl .memzero
 
   // Set up stack pointer
@@ -41,7 +42,10 @@ secondary_cpu_entry:
 //
 // The provided region of memory must be 8-byte aligned.
 .memzero:
+  cbz x1, 2f
+1:
 	str xzr, [x0], #8
-	subs x1, x1, #8
-	b.gt .memzero
+	subs x1, x1, #1
+	bne 1b
+2:
 	ret
