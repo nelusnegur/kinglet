@@ -1,6 +1,9 @@
 [package]
-name = "drivers"
+name = "kinglet_drivers"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
+
+[dependencies]
+kinglet = { version = "0.0.1", path = "../klib", package = "kinglet_lib" }

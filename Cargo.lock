@@ -3,11 +3,15 @@
 version = 3
 
 [[package]]
-name = "drivers"
+name = "kinglet_aarch64"
 version = "0.0.1"
+dependencies = [
+ "kinglet_drivers",
+ "kinglet_kernel",
+]
 
 [[package]]
-name = "kinglet_aarch64"
+name = "kinglet_drivers"
 version = "0.0.1"
 dependencies = [
  "kinglet_lib",

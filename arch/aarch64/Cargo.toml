@@ -7,3 +7,4 @@ license.workspace = true
 
 [dependencies]
 kinglet_kernel = { path = "../../kernel" }
+kinglet_drivers = { path = "../../drivers/" }

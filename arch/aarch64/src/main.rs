@@ -3,3 +3,4 @@
 
 mod panic;
 mod start;
+mod cpu;
