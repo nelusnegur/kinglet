@@ -1,4 +1,3 @@
-use core::ptr;
 use core::ptr::NonNull;
 
 /// Represents a statically known mutable memory address used for MMIO.
@@ -22,20 +21,20 @@ impl<T> Register<T> {
     }
 
     /// Reads the value at the register address.
-    #[inline(always)]
+    #[inline]
     pub fn read(&self) -> T {
         // SAFETY
         // The ptr is valid as promised by the caller
         // of the `new` function.
-        unsafe { ptr::read_volatile(self.ptr.as_ptr()) }
+        unsafe { self.ptr.read_volatile() }
     }
 
     /// Writes the provided value at the register address.
-    #[inline(always)]
+    #[inline]
     pub fn write(&mut self, value: T) {
         // SAFETY
         // The ptr is valid as promised by the caller
         // of the `new` function.
-        unsafe { ptr::write_volatile(self.ptr.as_ptr(), value) };
+        unsafe { self.ptr.write_volatile(value) };
     }
 }
