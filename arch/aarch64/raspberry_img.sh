@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-KERNEL_IMAGE=kernel8.img
+KERNEL_IMAGE=kernel_2712.img
 
 echo "Build the kernel"
 cargo build --release
